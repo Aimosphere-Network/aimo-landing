@@ -54,24 +54,35 @@
 
         h1 {
             font-family: 'Host Grotesk', sans-serif;
-            font-size: 2.5rem; /* Reduced size */
+            font-size: 2.5rem; /* Default size */
             margin: 0;
             color: #FF5AA9; /* Almost Fuchsia */
         }
 
-        p {
-            font-size: 1.2rem;
-            margin: 20px 0 0;
+        p.subtitle {
+            font-size: 2rem;
+            margin-top: 80px;
             color: #FFFFFF; /* White */
         }
 
         .logo {
             margin-bottom: 20px;
+            width: 80%; /* Responsive width */
+            max-width: 450px; /* Max width to prevent it from growing too large */
         }
 
         .logo img {
-            width: 450px; /* Increased size */
+            width: 100%; /* Make the logo fully responsive */
             height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p.coming-soon {
+            font-size: 1.5rem; /* Increased size */
+            font-weight: bold; /* Make it bold */
+            color: #FF5AA9; /* Almost Fuchsia */
+            margin-top: 30px; /* Adjust spacing */
         }
 
         .footer {
@@ -95,9 +106,28 @@
             z-index: 1;
             pointer-events: none;
         }
-    </style>
-    <!-- Delaunator CDN -->
 
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Smaller font size for tablets and smaller devices */
+            }
+
+            p.coming-soon {
+                font-size: 1.3rem; /* Adjust size for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem; /* Even smaller font size for very small screens */
+            }
+
+            p.coming-soon {
+                font-size: 1.1rem; /* Adjust size for very small screens */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -108,6 +138,7 @@
         <img src="logo.svg" alt="Aimosphere Logo">
     </div>
     <h1>Empowering AI Through Privacy-First Network</h1>
+    <p class="subtitle">Coming soon</p>
 
     <!-- Import the external JavaScript file -->
     <script src='http://requirejs.org/docs/release/2.1.15/minified/require.js'></script>
