@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aimosphere is a decentralized platform focusing on secure AI model deployment and confidential interactions. Discover the future of privacy-first AI solutions.">
+    <title>Aimosphere Network</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Define Host Grotesk font */
+        @font-face {
+            font-family: 'Host Grotesk';
+            src: url('host_grotesk/webfonts/HostGrotesk-Regular.woff2') format('woff2'),
+                 url('host_grotesk/webfonts/HostGrotesk-Regular.woff') format('woff'),
+                 url('host_grotesk/webfonts/HostGrotesk-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Host Grotesk';
+            src: url('host_grotesk/webfonts/HostGrotesk-Bold.woff2') format('woff2'),
+                 url('host_grotesk/webfonts/HostGrotesk-Bold.woff') format('woff'),
+                 url('host_grotesk/webfonts/HostGrotesk-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        /* Define Schibsted Grotesk using Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;700&display=swap');
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #051e3d; /* Dark Plum */
+            background: radial-gradient(ellipse at center, rgba(5, 30, 61, 1) 0%, rgba(4, 24, 53, 1) 100%);
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            color: #FFFFFF; /* White */
+            font-family: 'Schibsted Grotesk', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Host Grotesk', sans-serif;
+            font-size: 2.5rem; /* Reduced size */
+            margin: 0;
+            color: #FF5AA9; /* Almost Fuchsia */
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0 0;
+            color: #FFFFFF; /* White */
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 450px; /* Increased size */
+            height: auto;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #CCCCCC;
+        }
+
+        .footer a {
+            color: #FF5AA9; /* Almost Fuchsia */
+            text-decoration: none;
+        }
+
+        /* Canvas for the animated background */
+        #stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+    <!-- Delaunator CDN -->
+
+</head>
+<body>
+
+    <!-- Canvas for stars -->
+    <canvas id="stars"></canvas>
+
+    <div class="logo">
+        <img src="logo.svg" alt="Aimosphere Logo">
+    </div>
+    <h1>Empowering AI Through Privacy-First Network</h1>
+
+    <!-- Import the external JavaScript file -->
+    <script src='http://requirejs.org/docs/release/2.1.15/minified/require.js'></script>
+    <script src='https://rawgit.com/ironwallaby/delaunay/master/delaunay.js'></script><script  src="./stars_background.js"></script>
+
+</body>
+</html>
